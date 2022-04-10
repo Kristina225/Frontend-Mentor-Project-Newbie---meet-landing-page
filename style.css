@@ -27,7 +27,7 @@ body {
     font-family: 'Red Hat Display', sans-serif;
     text-align: center;
     position: relative;
-    background: url('assets/desktop/image-hero-left.png'), url('assets/desktop/image-hero-right.png');
+    background: url('assets/desktop/image-hero-left.png'), url('assets/desktop/image-hero-right.png'), var(--color-light);
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
     background-position: top 16.9rem left -3.2rem, top 22.4rem right -3.2rem;
@@ -254,7 +254,7 @@ body {
 @media only screen and (max-width: 770px) {
     body {
         position: relative;
-        background: url('assets/tablet/image-hero.png');
+        background: url('assets/tablet/image-hero.png'), var(--color-light);
         background-repeat: no-repeat;
         background-size: auto;
         background-position: top 14rem center;
