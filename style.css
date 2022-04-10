@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    --color-dark-cyan: #4d96a8;
+    --color-light-cyan: #8FE3F9;
+    --color-cyan-hover: #71C0D4;
+    --color-dark-purple: #855FB1;
+    --color-light-purple: #D9B8FF;
+    --color-purple-hover: #B18BDD;
+    --color-dark: #28283D;
+    --color-light: #FAFAFA;
+    --color-gray: #87879D;
+}
+
+/* --------------------------------- DESKTOP VIEW -------------------------------- */
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    position: relative;
+    background: url('assets/desktop/image-hero-left.png'), url('assets/desktop/image-hero-right.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+    background-position: top 16.9rem left -3.2rem, top 22.4rem right -3.2rem;
+    max-height: 100vh;
+}
+
+/* ------- Desktop: Header Styles -------- */
+.header {
+    margin: 8rem auto 0 auto;
+}
+
+.header__content {
+    max-width: 54rem;
+    margin: 10.8rem auto 0 auto;
+}
+
+.header__content--title {
+    font-size: 6.4rem;
+    font-weight: 900;
+    line-height: 6.4rem;
+    max-width: 44.5rem;
+    margin: 0 auto 0 auto;
+    color: var(--color-dark);
+}
+
+.header__content--text {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-top: 3.4rem;
+    color: var(--color-gray);
+}
+
+.header__content--buttons {
+    margin-top: 3.2rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.header__content--button,
+.footer__content--button {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 2.9rem;
+    padding: 1.6rem 0 1.6rem 0;
+    color: #fff;
+}
+
+.header__content--button--download {
+    width: 19.3rem;
+    background-color: var(--color-dark-cyan);
+    transition: all 0.2s linear;
+}
+
+.header__content--button--download:hover {
+    cursor: pointer;
+    background-color: var(--color-cyan-hover);
+}
+
+.header__content--button--download span {
+    margin-left: 0.04rem;
+    color: var(--color-light-cyan);
+}
+
+.header__content--button--info,
+.footer__content--button {
+    width: 13.9rem;
+    background-color: var(--color-dark-purple);
+    transition: all 0.2s linear;
+}
+
+.header__content--button--info:hover, 
+.footer__content--button:hover {
+    cursor: pointer;
+    background-color: var(--color-purple-hover);
+}
+
+/* ---------- Desktop: Section Separators Styles --------- */
+.section-separator {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 2.6rem;
+    width: 5.6rem;
+    height: 5.6rem;
+    margin: 20.1rem auto 0 auto;
+    border-radius: 50%;
+    border: 0.1rem solid rgba(135, 135, 157, 0.25);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-gray);
+}
+
+.section-separator::before {
+    content: "";
+    width: 0.1rem;
+    height: 8.4rem;
+    position: absolute;
+    bottom: 5.5rem;
+    left: 50%;
+    background-color: rgba(135, 135, 157, 0.25);
+}
+
+.section-separator--two {
+    position: absolute;
+    left: 50%;
+    bottom: 30.8rem;
+    transform: translate(-50%, 50%);
+    background-color: var(--color-light);
+    z-index: 10;
+}
+
+/* ---------- Desktop : Main Content Styles ---------- */
+.images {
+    max-width: 111rem;
+    margin: 6.4rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.image {
+    width: 100%;
+    border-radius: 0.8rem;
+}
+
+.content {
+    max-width: 54rem;
+    margin: 8rem auto 0 auto;
+}
+
+.content__subtitle {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 2.6rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    color: var(--color-dark-cyan);
+}
+
+.content__title {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 4.4rem;
+    max-width: 44.5rem;
+    margin: 1.6rem auto 0 auto;
+    color: var(--color-dark)
+}
+
+.content__text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    text-align: center;
+    margin: 3.2rem auto 0 auto;
+    color: var(--color-gray);
+}
+
+/* ------------ Desktop: Footer Styles ------------- */
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 30.8rem;
+    margin-top: 18.4rem;
+    padding-top: 11.6rem;
+    display: flex;
+    justify-content: center;
+    background: url("assets/desktop/image-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(77, 150, 168, 0.75);
+}
+
+.footer__content {
+    max-width: 111rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    color: var(--color-light);
+    z-index: 10;
+}
+
+.footer__content--title {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 4.4rem;
+    max-width: 35rem;
+    margin-right: 12.5rem;
+}
+
+.footer__content--text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    max-width: 35rem;
+    margin-right: 9.2rem;
+}
+
+.footer__content--button span {
+    color: var(--color-light-purple);
+}
+
+
+
+
+
+
+/* ------------------------------------ TABLET VIEW ------------------------------------ */
+
+@media only screen and (max-width: 770px) {
+    body {
+        position: relative;
+        background: url('assets/tablet/image-hero.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: top 14rem center;
+    }
+
+    /* ------- Tablet: Header Styles -------- */
+    .header {
+        margin: 4.8rem auto 0 auto;
+    }
+
+    .header__content {
+        max-width: 54rem;
+        margin: 51.5rem auto 0 auto;
+    }
+
+    .header__content--title {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+        max-width: 33.9rem;
+    }
+
+    .header__content--text {
+        font-size: 1.6rem;
+        margin-top: 2.4rem;
+    }
+
+    .header__content--buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ---------- Tablet: Section Separators Styles --------- */
+    .section-separator {
+        margin: 16.4rem auto 0 auto;
+    }
+
+    .section-separator--two {
+        bottom: 42.8rem;
+    }
+
+    /* ---------- Tablet : Main Content Styles ---------- */
+    .images {
+        max-width: 68.9rem;
+        margin: 6.7rem auto 0 auto;
+        gap: 1.1rem;
+    }
+
+    .content {
+        max-width: 57.3rem;
+        margin: 4.8rem auto 0 auto;
+    }
+
+    .content__text {
+        font-size: 1.6rem;
+    }
+
+    /* ------------ Tablet: Footer Styles ------------- */
+
+    .footer {
+        height: 42.8rem;
+        margin-top: 19.2rem;
+        padding-top: 9.2rem;
+        background: url("assets/tablet/image-footer.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .footer__content {
+        max-width: 57.3rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__content--title {
+        max-width: 45.7rem;
+        margin: 0 0 3.2rem 0;
+    }
+
+    .footer__content--text {
+        max-width: 57.3rem;
+        margin: 0 0 4rem 0;
+    }
+}
+
+
+
+
+
+
+/* ------------------------------------ MOBILE VIEW ------------------------------------ */
+
+@media only screen and (max-width: 450px) {
+    body {
+        background-size: 41.4rem 15.3rem;
+        background-position: top 13rem center;
+    }
+
+    /* ------- Mobile: Header Styles -------- */
+    .header__content {
+        max-width: 32.7rem;
+        margin: 25.5rem auto 0 auto;
+    }
+
+    .header__content--title {
+        font-size: 4rem;
+        line-height: 4.4rem;
+    }
+
+    /* ---------- Mobile: Section Separators Styles --------- */
+    .section-separator {
+        margin: 14.8rem auto 0 auto;
+    }
+
+    /* ---------- Mobile : Main Content Styles ---------- */
+    .images {
+        max-width: 32.7rem;
+        margin: 6.4rem auto 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: repeat(2, 1fr);
+        row-gap: 2.4rem;
+        column-gap: 2.5rem;
+    }
+
+    .image {
+        flex-basis: 15.1rem;
+    }
+
+    .content {
+        max-width: 32.7rem;
+        margin: 6.4rem auto 0 auto;
+    }
+
+    .content__title {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+        max-width: 32.7rem;
+        margin: 2.4rem auto 0 auto;
+    }
+    
+    .content__text {
+        font-size: 1.6rem;
+    }
+
+    /* ------------ Mobile: Footer Styles ------------- */
+
+    .footer {
+        margin-top: 17.6rem;
+        background: url("assets/mobile/image-footer.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .footer__content {
+        max-width: 32.7rem;
+    }
+    
+    .footer__content--title {
+        max-width: 32.7rem;
+        margin: 0 0 2.4rem 0;
+    }
+    
+    .footer__content--text {
+        max-width: 32.7rem;
+        margin: 0 0 3.2rem 0;
+    }
+}
